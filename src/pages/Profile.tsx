@@ -47,7 +47,7 @@ const Profile = () => {
           <form action="#" method="POST">
             <div className="overflow-hidden shadow sm:rounded-md">
               <div className="bg-white px-4 py-5 sm:p-6">
-                <div className="grid grid-cols-6 gap-6">
+                <div className="grid grid-cols-6 gap-6 mb-10">
                   <div className="col-span-6 sm:col-span-3">
                     <Input label="First name" id="first-name" value={firstName} setValue={setFirstName} />
                   </div>
@@ -63,6 +63,7 @@ const Profile = () => {
                 </div>
                 <div className="grid grid-cols-6 gap-6">
                   <div className="col-span-6 sm:col-span-3">
+                    Interests:
                     <Select
                       className="basic-single"
                       classNamePrefix="select"
