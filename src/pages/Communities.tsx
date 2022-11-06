@@ -23,7 +23,13 @@ const Communities = () => {
     })()
   }, [])
 
-  const handleSubscribe = () => {}
+  const handleSubscribe = async (community: any) => {
+    const community_id = community._id;
+    const profile_id  = '63673b3499617eba8c396735';
+    const result = await axios.post('http://localhost:8000/communities/subscribe', {community_id, profile_id})
+    alert("Subscribed Successfully to " + community.name)
+  }
+
   return (
     <div>
       <Card title="Communities">
@@ -36,7 +42,7 @@ const Communities = () => {
                   <p className="text-sm text-gray-500 truncate dark:text-gray-400">{getInterests(community)}</p>
                 </div>
                 <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                  <Button type="button" onClick={handleSubscribe}>
+                  <Button type="button" onClick={async () => {await handleSubscribe(community)}}>
                     subscribe
                   </Button>
                 </div>
