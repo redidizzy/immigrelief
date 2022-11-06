@@ -25,7 +25,7 @@ const DesktopNavigation = () => {
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex space-x-4">
               <NavLink to="/" aria-current="page" className={generateClassName}>
-                Index
+                Home
               </NavLink>
 
               <NavLink to="/communities" className={generateClassName}>
