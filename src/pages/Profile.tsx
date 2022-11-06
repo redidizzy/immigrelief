@@ -54,7 +54,6 @@ const Profile = () => {
 
                   <div className="col-span-6 sm:col-span-3">
                     <Input label="Last name" id="last-name" value={lastName} setValue={setLastName} />
-                    {lastName}
                   </div>
 
                   <div className="col-span-6 sm:col-span-4">
